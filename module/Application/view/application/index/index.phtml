@@ -1,0 +1,32 @@
+<?php
+$return="";
+foreach ($this->books as $item){
+    $return.="<tr>";
+        $return.="<td>";
+        $return.=$item->getId();
+        $return.="</td>";
+        $return.="<td>";
+        $return.=$item->getTitle();
+        $return.="</td>";
+        $return.="<td>";
+        $return.=$item->getDescription();
+        $return.="</td>";
+        $return.="<td>";
+        $return.=$item->getIsActive();
+        $return.="</td>";
+    $return.="</tr>";
+}?>
+
+<div class="row pt-5">
+    <table class="table table-bordered table-responsive">
+        <tr>
+            <th>#</th>
+            <th>Названия</th>
+            <th>Описания</th>
+            <th>Статус</th>
+        </tr>
+        <?=$return?>
+    </table>
+
+</div>
+
